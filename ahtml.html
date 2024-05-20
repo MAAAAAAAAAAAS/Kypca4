@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:ital,wght@0,400;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="acss.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="application/javascript" src="ajs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <title>Курсовая работа</title>
+</head>
+
+<body>
+    <div class="content">
+        <table class="navbar" align="center">
+            <tr>
+                <td>
+                    <a href="#load" onclick="view('load'); return false">Загрузка таблицы</a>
+                </td>
+                <td>
+                    <a href="#edit" onclick="view('edit'); return false">Редактирование таблицы</a>
+                </td>
+                <td>
+                    <a href="#statistics" onclick="view('statistics'); return false">Табличная статистика</a>
+                </td>
+                <td>
+                    <a href="#charts" onclick="view('charts'); return false">Графическая статистика</a>
+                </td>
+                <td>
+                    <a href="#helpmepls" onclick="view('helpmepls'); return false">Помощь</a>
+                </td>
+                <td>
+                    <a href="#aboutmexd" onclick="view('aboutmexd'); return false">О программе</a>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <div id="load" style="display: none;">
+            <hr>
+            <input type="file" id="fileInput" onchange="loadStudentsData()">
+        </div>
+        <div id="edit" style="display: none;">
+            <hr>
+            <table id="editTable">
+            </table>
+            <button onclick="saveData('csv')">Сохранить в CSV</button>
+            <button onclick="saveData('txt')">Сохранить в TXT</button>
+            <button onclick="saveData('xlsx')">Сохранить в XLSX</button>
+        </div>
+        <div id="statistics" style="display: none;">
+            <hr>
+            <table id="statisticsTable">
+            </table>
+            <table id="studentsStatisticsTable" style="display: none; position: relative; right: 20%;">
+            </table>
+        </div>
+        <div id="charts" style="display: none;">
+            <hr>
+            <h1>Статистика (Графическая)</h1>
+            <canvas id="chart-average"></canvas>
+            <canvas id="chart-median"></canvas>
+            <button style="position: relative; float: left;" onclick="drawChart()">График классов</button>
+            <canvas id="studentGradesChart"></canvas>
+            <button style="position: relative; float: left;" onclick="drawstudentChart()">График статистики учеников</button>
+        </div>
+        <div id="helpmepls" style="display: none;">
+            <hr>
+            <h1>Помощь</h1>
+            <p style="position: relative; font-size: 20px">Загрузка таблицы - загружаем таблицу, редактирование таблицы - редактируем таблицу, табличная статистика - табличная статистика, графическая статистика - графическая статистика, помощь - помагает, о программе - программа.
+        </div>
+        <div id="aboutmexd" style="display: none;">
+            <hr>
+            <h1>О программе</h1>
+            <a style="position: relative; font-size: 20px" href="https://vk.com/onmoyuza">VK</a><td>
+            <div style="position: relative; font-size: 20px">Email: reddid@list.ru</div>
+            <img style="position: relative; width: 70%;" src="https://sun9-12.userapi.com/impg/ArPpGRP2KgGicVf0yQVRlNNc9BKA3Rszspxgvg/7Y8udWZo0go.jpg?size=1280x923&quality=95&sign=3e1f3492fdf99f8fc0327af13218f6d2&type=album"></img>
+        </div>
+    </div>
+
+</body>
+
+</html>

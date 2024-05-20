@@ -1,0 +1,52 @@
+body {
+  background-color: pink;
+}
+
+.content {;
+     margin: 0 auto;
+    width: 800px;
+}
+
+.naim {
+    font-size: 34px;
+    color: #345B7C;
+    text-align: left;
+    text-indent: 5px;
+}
+
+.naim2 {
+    font-size: 34px;
+    color: #68347c;
+    text-align: left;
+    text-indent: 1px
+}
+
+.naim1 {
+    font-size: 34px;
+    color: #76347c;
+    text-align: center;
+    text-indent: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.navbar {
+    background-color: pink;
+
+}
+
+td {
+    border: 2px solid #000000;
+    padding: 10px;
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+}
+
